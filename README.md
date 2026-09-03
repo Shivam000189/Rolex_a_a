@@ -1,26 +1,41 @@
 # Store Rating and Management Platform
 
-A full-stack web application designed for multi-tier store rating, performance analytics, and store directory administration. Built with **React 19, Vite, Tailwind CSS v4, TypeScript, Express.js, Prisma ORM, and PostgreSQL**.
+A modern full-stack web application designed for multi-tier store rating, performance analytics, and store directory administration. Built with **React 19, Vite, Tailwind CSS v4, TypeScript, Express.js, Prisma ORM, and PostgreSQL**.
+
+---
+
+## Application Screenshots Preview
+
+| Admin Analytics Dashboard | Users Directory & Management |
+| :---: | :---: |
+| ![Admin Analytics Dashboard](./rolex/Screenshot%202026-09-03%20194122.png) | ![Users Management Table](./rolex/Screenshot%202026-09-03%20194134.png) |
+| *Real-time KPI metrics, Leaderboard & Distribution* | *Filterable user management & role control* |
+
+| Stores Directory & Rating Management |
+| :---: |
+| ![Stores Management Table](./rolex/Screenshot%202026-09-03%20194143.png) |
+| *Store directory, search, rating visualization, and details modal* |
 
 ---
 
 ## Table of Contents
 
 1. [Project Overview](#project-overview)
-2. [User Roles & Key Features](#user-roles--key-features)
-3. [Technology Stack](#technology-stack)
-4. [Folder Structure](#folder-structure)
-5. [Business Rules & Form Validations](#business-rules--form-validations)
-6. [Prerequisites](#prerequisites)
-7. [Step-by-Step Local Setup](#step-by-step-local-setup)
+2. [Application Screenshots Preview](#application-screenshots-preview)
+3. [User Roles & Key Features](#user-roles--key-features)
+4. [Technology Stack](#technology-stack)
+5. [Folder Structure](#folder-structure)
+6. [Business Rules & Form Validations](#business-rules--form-validations)
+7. [Prerequisites](#prerequisites)
+8. [Step-by-Step Local Setup](#step-by-step-local-setup)
    - [1. Clone Repository](#1-clone-repository)
    - [2. Backend Setup & Configuration](#2-backend-setup--configuration)
    - [3. Database Migration & Seeding](#3-database-migration--seeding)
    - [4. Frontend Setup & Configuration](#4-frontend-setup--configuration)
    - [5. Running the Application](#5-running-the-application)
-8. [Demo Login Credentials](#demo-login-credentials)
-9. [API Endpoints Reference](#api-endpoints-reference)
-10. [Available NPM Scripts](#available-npm-scripts)
+9. [Demo Login Credentials](#demo-login-credentials)
+10. [API Endpoints Reference](#api-endpoints-reference)
+11. [Available NPM Scripts](#available-npm-scripts)
 
 ---
 
@@ -37,20 +52,31 @@ The **Store Rating and Management Platform** allows users to discover local busi
 ## User Roles & Key Features
 
 ### 1. System Administrator (`ADMIN`)
+
+![Admin Analytics Dashboard](./rolex/Screenshot%202026-09-03%20194122.png)
+
 - **Executive Analytics Dashboard**:
   - Live metric cards: Total Registered Users (broken down by role), Total Stores, Total Rating Submissions, and Overall Average Platform Rating.
   - Top-Rated Stores Leaderboard with direct link to store management.
   - Rating Distribution visualizer (5-to-1 Star breakdown percentage).
   - Recent Registrations activity feed with role badges.
+
+![Stores Management Interface](./rolex/Screenshot%202026-09-03%20194143.png)
+
 - **Store Management**:
   - Filterable and sortable table of all stores (by name, email, and address).
   - **Store Information Modal**: Click any store to open a comprehensive details modal showing store ID, email, address, total reviews, published score, and assigned owner details.
   - **Rating Override**: Modify any store's rating (1.0 to 5.0 stars with exact decimal precision).
   - **Store Deletion**: Remove a store with automatic cascade deletion of its associated customer reviews.
   - **Add Store**: Register new stores with name, email, address, and assign an eligible store owner.
+
+![Users Management Interface](./rolex/Screenshot%202026-09-03%20194134.png)
+
 - **User Management**:
   - Filterable table of all registered accounts (by name, email, address, and role).
   - Add new users with any system role (`ADMIN`, `STORE_OWNER`, `USER`).
+
+---
 
 ### 2. Store Owner (`STORE_OWNER`)
 - **Store Performance Dashboard**:
@@ -58,6 +84,8 @@ The **Store Rating and Management Platform** allows users to discover local busi
   - 4 Key Performance Indicators: Average Rating, Total Reviews, Satisfaction Index (4+ Star %), and Milestone Progress.
   - Interactive Rating Distribution progress bars showing the breakdown of 5, 4, 3, 2, and 1-star reviews.
   - Customer Feedback Feed: Live search reviews by customer name/email, filter by specific star tier (All, 5-Star, 4-Star...), and switch between Card View and Table View.
+
+---
 
 ### 3. Normal User / Customer (`USER`)
 - **Stores Directory**:
@@ -94,6 +122,11 @@ The **Store Rating and Management Platform** allows users to discover local busi
 
 ```
 Roxil_assignment/
+├── rolex/                          # Application Screenshots & Media Assets
+│   ├── Screenshot 2026-09-03 194122.png   # Admin Dashboard Overview
+│   ├── Screenshot 2026-09-03 194134.png   # User Management Interface
+│   └── Screenshot 2026-09-03 194143.png   # Store Directory & Management Table
+│
 ├── client/                         # Frontend React Application
 │   ├── src/
 │   │   ├── components/             # Reusable UI Components
